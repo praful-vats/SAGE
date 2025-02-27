@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAGE Terminal Design System</title>
+  <link rel="stylesheet" href="sage-design-system.css">
+  <style>
+    /* Demo page styles */
+    .component-section {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed var(--crt-green-dim);
+    }
+    
+    .component-title {
+      margin-bottom: 16px;
+    }
+    
+    .component-description {
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+    
+    #page-header {
+      text-align: center;
+      margin: 20px 0 40px;
+    }
+    
+    #toc {
+      margin-bottom: 40px;
+    }
+    
+    #toc a {
+      color: var(--crt-green);
+      text-decoration: none;
+      display: block;
+      padding: 4px 0;
+    }
+    
+    #toc a:hover {
+      text-decoration: underline;
+      color: var(--crt-green-bright);
+    }
+  </style>
+</head>
+<body class="crt-noise">
+  <div class="container">
+    <header id="page-header" class="screen-corners">
+      <div>
+        <h1>SAGE TERMINAL DESIGN SYSTEM</h1>
+        <p class="typing">System Version 1.0 - TOP SECRET // CLASSIFIED MATERIAL</p>
+      </div>
+    </header>
+    
+    <div class="terminal-window">
+      <div class="terminal-content boot-sequence">
+        <p>> WELCOME TO SAGE TERMINAL INTERFACE</p>
+        <p>> Authenticated: SYSTEM_OPERATOR</p>
+        <p>> Access Level: ALPHA</p>
+        <p>> THIS SYSTEM CONTAINS CLASSIFIED INFORMATION</p>
+        <p>> Displaying design system components...</p>
+      </div>
+    </div>
+    
+    <section id="toc">
+      <h2>Table of Contents</h2>
+      <div class="grid-container">
+        <div class="grid-item half">
+          <a href="#typography">Typography</a>
+          <a href="#buttons">Buttons</a>
+          <a href="#forms">Form Elements</a>
+          <a href="#cards">Cards</a>
+          <a href="#alerts">Alerts</a>
+          <a href="#tables">Tables</a>
+          <a href="#status">Status Indicators</a>
+          <a href="#progress">Progress Bars</a>
+        </div>
+        <div class="grid-item half">
+          <a href="#radar">Radar Display</a>
+          <a href="#terminal">Terminal Elements</a>
+          <a href="#navigation">Navigation</a>
+          <a href="#tabs">Tabs & Accordions</a>
+          <a href="#loaders">Loaders</a>
+          <a href="#notifications">Notifications</a>
+          <a href="#utilities">Utility Classes</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Typography -->
+    <section id="typography" class="component-section">
+      <h2 class="component-title">Typography</h2>
+      <p class="component-description">The type system is based on monospace fonts to emulate vintage terminal displays.</p>
+      
+      <h1>Heading Level 1</h1>
+      <h2>Heading Level 2</h2>
+      <h3>Heading Level 3</h3>
+      <h4>Heading Level 4</h4>
+      
+      <p>This is a paragraph of text. The design system uses monospace fonts to recreate the look and feel of vintage terminal displays. The primary text color is a bright green (#33ff33) against a black background, reminiscent of early CRT monitors.</p>
+      
+      <p>Text can be <strong>bold</strong> or <em>emphasized</em>. You can also use <code>inline code formatting</code> for technical information.</p>
+      
+      <div class="text-glow">This text has a glowing effect</div>
+      <div class="text-flicker">This text flickers like an old terminal</div>
+      <div class="typewriter-effect">This text appears as if it's being typed</div>
+    </section>
+    
+    <!-- Buttons -->
+    <section id="buttons" class="component-section">
+      <h2 class="component-title">Buttons</h2>
+      <p class="component-description">Buttons are styled to look like vintage terminal command inputs.</p>
+      
+      <button class="btn primary">Primary Button</button>
+      <button class="btn secondary">Secondary Button</button>
+      <button class="btn danger">Danger Button</button>
+      <button class="btn" disabled>Disabled Button</button>
+      
+      <div class="mt-md mb-md"></div>
+      
+      <button class="btn large primary">Large Button</button>
+      <button class="btn small secondary">Small Button</button>
+      
+      <div class="mt-md mb-md"></div>
+      
+      <div class="btn-group-vintage">
+        <button class="btn">Left</button>
+        <button class="btn">Middle</button>
+        <button class="btn">Right</button>
+      </div>
+    </section>
+    
+    <!-- Forms -->
+    <section id="forms" class="component-section">
+      <h2 class="component-title">Form Elements</h2>
+      <p class="component-description">Form controls styled to match the SAGE terminal aesthetic.</p>
+      
+      <form>
+        <div class="form-group">
+          <label class="form-label">Text Input</label>
+          <input type="text" class="form-input" placeholder="Enter command...">
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Select Dropdown</label>
+          <div class="vintage-select">
+            <select>
+              <option>SECTOR ALPHA</option>
+              <option>SECTOR BETA</option>
+              <option>SECTOR GAMMA</option>
+              <option>SECTOR DELTA</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Textarea</label>
+          <textarea class="form-input" rows="3" placeholder="Enter log entry..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <div class="checkbox-vintage">
+            <input type="checkbox" id="checkbox1" class="checkbox-vintage-input">
+            <label for="checkbox1" class="checkbox-vintage-label">
+              <span class="checkbox-vintage-box"></span>
+              Checkbox Option
+            </label>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <div class="radio-vintage">
+            <div class="radio-vintage-option">
+              <input type="radio" name="radio-group" id="radio1" class="radio-vintage-input">
+              <label for="radio1" class="radio-vintage-label">
+                <span class="radio-vintage-button"></span>
+                Radio Option 1
+              </label>
+            </div>
+            <div class="radio-vintage-option">
+              <input type="radio" name="radio-group" id="radio2" class="radio-vintage-input">
+              <label for="radio2" class="radio-vintage-label">
+                <span class="radio-vintage-button"></span>
+                Radio Option 2
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Range Slider</label>
+          <input type="range" class="retro-range" min="0" max="100" value="50">
+        </div>
+    <div class="form-group">
+      <label class="form-label">File Upload</label>
+      <div class="file-upload-vintage">
+        <input type="file" id="file-upload">
+        <label for="file-upload" class="file-upload-vintage-label">
+          <span class="file-upload-vintage-icon">📂</span>
+          <span class="file-upload-vintage-text">Choose a file</span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="form-label">Input Group</label>
+      <div class="input-group-vintage">
+        <div class="input-group-vintage-prepend">CMD:</div>
+        <input type="text" class="input-group-vintage-input" placeholder="Enter command...">
+        <div class="input-group-vintage-append">EXEC</div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="form-label">Search Input</label>
+      <div class="search-input">
+        <input type="text" placeholder="Search database...">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="form-label">Password with Strength Meter</label>
+      <input type="password" class="form-input" placeholder="Enter password...">
+      <div class="password-strength password-strength-medium">
+        <div class="password-strength-meter">
+          <div class="password-strength-meter-fill"></div>
+        </div>
+        <div class="password-strength-text">Medium strength</div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- Cards -->
+<section id="cards" class="component-section">
+  <h2 class="component-title">Cards</h2>
+  <p class="component-description">Information cards for displaying content in contained units.</p>
+  
+  <div class="grid-container">
+    <div class="grid-item half">
+      <div class="card">
+        <div class="card-header">Card Header</div>
+        <div class="card-body">
+          <p>This is a basic card component for displaying content in a contained unit.</p>
+        </div>
+        <div class="card-footer">Card Footer</div>
+      </div>
+    </div>
+    
+    <div class="grid-item half">
+      <div class="card-vintage">
+        <div class="card-vintage-header">
+          <h3>Mission Briefing</h3>
+        </div>
+        <div class="card-vintage-body">
+          <p>Alternative card style with a vintage terminal look. Contains important mission information.</p>
+        </div>
+        <div class="card-vintage-footer">
+          <button class="btn small">Accept Mission</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Card Grid</h3>
+  <div class="card-grid-vintage">
+    <div class="card-grid-vintage-item">
+      <div class="card-grid-vintage-header">Sector Alpha</div>
+      <div class="card-grid-vintage-body">
+        <p>Status: <span class="text-success">Clear</span></p>
+      </div>
+    </div>
+    <div class="card-grid-vintage-item">
+      <div class="card-grid-vintage-header">Sector Beta</div>
+      <div class="card-grid-vintage-body">
+        <p>Status: <span class="text-warning">Caution</span></p>
+      </div>
+    </div>
+    <div class="card-grid-vintage-item">
+      <div class="card-grid-vintage-header">Sector Gamma</div>
+      <div class="card-grid-vintage-body">
+        <p>Status: <span class="text-danger">Alert</span></p>
+      </div>
+    </div>
+    <div class="card-grid-vintage-item">
+      <div class="card-grid-vintage-header">Sector Delta</div>
+      <div class="card-grid-vintage-body">
+        <p>Status: <span class="text-success">Clear</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Alerts -->
+<section id="alerts" class="component-section">
+  <h2 class="component-title">Alerts</h2>
+  <p class="component-description">Alert messages for indicating system status and notifications.</p>
+  
+  <div class="alert alert-info">
+    <strong>Information:</strong> This is a standard information alert.
+  </div>
+  
+  <div class="alert alert-warning">
+    <strong>Warning:</strong> This is a warning alert for potential issues.
+  </div>
+  
+  <div class="alert alert-danger">
+    <strong>Danger:</strong> This is a danger alert for critical situations.
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <div class="alert-vintage alert-vintage-success">
+    <span class="alert-vintage-icon">✓</span>
+    <strong>Success:</strong> Operation completed successfully.
+    <button class="alert-vintage-close">×</button>
+  </div>
+  
+  <div class="callout">
+    <div class="callout-title">System Notice</div>
+    <p>This is a callout component for important information that needs to stand out from regular content.</p>
+  </div>
+  
+  <div class="callout callout-warning">
+    <div class="callout-title">Maintenance Warning</div>
+    <p>System maintenance scheduled for 0200 hours. Expect intermittent service disruptions.</p>
+  </div>
+</section>
+
+<!-- Tables -->
+<section id="tables" class="component-section">
+  <h2 class="component-title">Tables</h2>
+  <p class="component-description">Tables for displaying structured data.</p>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>Alpha Unit</td>
+        <td><span class="status-indicator status-online"></span> Online</td>
+        <td>Sector 7</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>Beta Unit</td>
+        <td><span class="status-indicator status-warning"></span> Warning</td>
+        <td>Sector 12</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>Gamma Unit</td>
+        <td><span class="status-indicator status-offline"></span> Offline</td>
+        <td>Sector 3</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Alternative Table Style</h3>
+  <table class="table-vintage table-vintage-striped">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Event</th>
+        <th>Priority</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08:42:15</td>
+        <td>Perimeter Breach</td>
+        <td><span class="badge-vintage badge-vintage-danger">High</span></td>
+        <td><button class="btn small">Respond</button></td>
+      </tr>
+      <tr>
+        <td>07:13:22</td>
+        <td>System Update</td>
+        <td><span class="badge-vintage">Normal</span></td>
+        <td><button class="btn small">
+        <td><button class="btn small">View</button></td>
+      </tr>
+      <tr>
+        <td>06:58:47</td>
+        <td>Maintenance Check</td>
+        <td><span class="badge-vintage badge-vintage-success">Low</span></td>
+        <td><button class="btn small">Log</button></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Data Table with Stats</h3>
+  <div class="data-table-container">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Station</th>
+          <th>CPU Usage</th>
+          <th>Memory</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Command Center</td>
+          <td>
+            <div class="progress">
+              <div class="progress-bar" style="width: 65%"></div>
+              <div class="progress-value">65%</div>
+            </div>
+          </td>
+          <td>4.2GB / 8GB</td>
+          <td><span class="status-indicator status-online"></span> Operational</td>
+        </tr>
+        <tr>
+          <td>Radar Array</td>
+          <td>
+            <div class="progress">
+              <div class="progress-bar" style="width: 82%"></div>
+              <div class="progress-value">82%</div>
+            </div>
+          </td>
+          <td>7.1GB / 8GB</td>
+          <td><span class="status-indicator status-warning"></span> High Load</td>
+        </tr>
+        <tr>
+          <td>Communications</td>
+          <td>
+            <div class="progress">
+              <div class="progress-bar" style="width: 24%"></div>
+              <div class="progress-value">24%</div>
+            </div>
+          </td>
+          <td>1.8GB / 8GB</td>
+          <td><span class="status-indicator status-online"></span> Operational</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Status Indicators -->
+<section id="status" class="component-section">
+  <h2 class="component-title">Status Indicators</h2>
+  <p class="component-description">Visual indicators for displaying status information.</p>
+  
+  <div class="grid-container">
+    <div class="grid-item half">
+      <h3>Status Lights</h3>
+      <div><span class="status-indicator status-online"></span> Online</div>
+      <div><span class="status-indicator status-warning"></span> Warning</div>
+      <div><span class="status-indicator status-offline"></span> Offline</div>
+      <div><span class="status-indicator status-standby"></span> Standby</div>
+    </div>
+    
+    <div class="grid-item half">
+      <h3>Badges</h3>
+      <div>System Status <span class="badge">NORMAL</span></div>
+      <div>Alert Level <span class="badge badge-warning">ELEVATED</span></div>
+      <div>Security <span class="badge badge-danger">BREACH</span></div>
+      
+      <div class="mt-md"></div>
+      
+      <h3>Vintage Badges</h3>
+      <span class="retro-badge">CLASSIFIED</span>
+      <span class="retro-badge">TOP SECRET</span>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Notification Badges</h3>
+  <div class="badge-notification" data-count="5">
+    <button class="btn">Messages</button>
+  </div>
+  <div class="badge-notification" data-count="12">
+    <button class="btn">Alerts</button>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Security Status</h3>
+  <div class="security-lock locked">SYSTEM LOCKED</div>
+  <div class="security-lock unlocked">SYSTEM UNLOCKED</div>
+</section>
+
+<!-- Progress Bars -->
+<section id="progress" class="component-section">
+  <h2 class="component-title">Progress Bars</h2>
+  <p class="component-description">Visual indicators for progress and loading states.</p>
+  
+  <h3>Standard Progress Bars</h3>
+  <div class="progress">
+    <div class="progress-bar" style="width: 25%"></div>
+    <div class="progress-value">25%</div>
+  </div>
+  
+  <div class="progress">
+    <div class="progress-bar" style="width: 50%"></div>
+    <div class="progress-value">50%</div>
+  </div>
+  
+  <div class="progress">
+    <div class="progress-bar" style="width: 75%"></div>
+    <div class="progress-value">75%</div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Vintage Progress Bars</h3>
+  <div class="progress-vintage">
+    <div class="progress-vintage-bar" style="width: 35%"></div>
+    <div class="progress-vintage-label">System Scan: 35%</div>
+  </div>
+  
+  <div class="progress-vintage">
+    <div class="progress-vintage-bar" style="width: 68%"></div>
+    <div class="progress-vintage-label">Data Transfer: 68%</div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Health Bars</h3>
+  <div class="health-bar">
+    <div class="health-bar-fill" style="width: 85%"></div>
+    <div class="health-bar-text">System Integrity: 85%</div>
+  </div>
+  
+  <div class="health-bar health-bar-medium">
+    <div class="health-bar-fill" style="width: 45%"></div>
+    <div class="health-bar-text">Power Reserves: 45%</div>
+  </div>
+  
+  <div class="health-bar health-bar-low">
+    <div class="health-bar-fill" style="width: 15%"></div>
+    <div class="health-bar-text">Shield Capacity: 15%</div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Progress Steps</h3>
+  <div class="progress-steps">
+    <div class="progress-step completed">
+      <div class="progress-step-number">1</div>
+      <div class="progress-step-label">Initialize</div>
+    </div>
+    <div class="progress-step completed">
+      <div class="progress-step-number">2</div>
+      <div class="progress-step-label">Connect</div>
+    </div>
+    <div class="progress-step active">
+      <div class="progress-step-number">3</div>
+      <div class="progress-step-label">Process</div>
+    </div>
+    <div class="progress-step">
+      <div class="progress-step-number">4</div>
+      <div class="progress-step-label">Complete</div>
+    </div>
+  </div>
+</section>
+
+<!-- Radar Display -->
+<section id="radar" class="component-section">
+  <h2 class="component-title">Radar Display</h2>
+  <p class="component-description">Interactive radar and coordinate display elements.</p>
+  
+  <div class="grid-container">
+    <div class="grid-item half">
+      <div class="radar-container">
+        <div class="radar-grid"></div>
+        <div class="radar-circles"></div>
+        <div class="radar-sweep"></div>
+        <div class="radar-blip" style="top: 30%; left: 70%"></div>
+        <div class="radar-blip" style="top: 60%; left: 40%"></div>
+        <div class="radar-blip" style="top: 45%; left: 25%"></div>
+      </div>
+      
+      <div class="coordinates-display">
+        Coordinates: <span class="coordinates-value">X:2457 Y:8932</span>
+      </div>
+    </div>
+    
+    <div class="grid-item half">
+      <h3>Targeting System</h3>
+      <div class="targeting-system">
+        <div class="targeting-crosshair"></div>
+        <div class="targeting-circle"></div>
+      </div>
+      
+      <div class="mt-md"></div>
+      
+      <h3>Minimap</h3>
+      <div class="minimap">
+        <div class="minimap-grid"></div>
+        <div class="minimap-marker" style="top: 30%; left: 45%"></div>
+        <div class="minimap-marker" style="top: 65%; left: 20%"></div>
+        <div class="minimap-player" style="top: 50%; left: 50%"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Map Grid</h3>
+  <div class="map-grid">
+    <!-- Generate 10x10 grid cells -->
+    <div class="map-cell"><div class="map-cell-coordinates">A1</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">A2</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">A3</div></div>
+    <div class="map-cell active"><div class="map-cell-coordinates">A4</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">A5</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">A6</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">A7</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">A8</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">A9</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">A10</div></div>
+    
+    <!-- Row B -->
+    <div class="map-cell"><div class="map-cell-coordinates">B1</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">B2</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">B3</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">B4</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">B5</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">B6</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">B7</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">B8</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">B9</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">B10</div></div>
+    
+    <!-- Row C (partial) -->
+    <div class="map-cell"><div class="map-cell-coordinates">C1</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">C2</div></div>
+    <div class="map-cell"><div class="map-cell-object">⚡</div><div class="map-cell-coordinates">C3</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">C4</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">C5</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">C6</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">C7</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">C8</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">C9</div></div>
+    <div class="map-cell"><div class="map-cell-coordinates">C10</div></div>
+    
+    <!-- Remaining cells would continue here -->
+    <!-- For brevity, only showing a portion of the grid -->
+    <!-- The rest of the rows would follow the same pattern -->
+  </div>
+</section>
+
+<!-- Terminal Elements -->
+<section id="terminal" class="component-section">
+  <h2 class="component-title">Terminal Elements</h2>
+  <p class="component-description">Components for terminal and command line interfaces.</p>
+  
+  <h3>Command Line</h3>
+  <div class="command-line">
+    <span class="command-prompt">SAGE></span>
+    <input type="text" class="command-input" placeholder="Enter command...">
+    <span class="command-cursor"></span>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Command Console</h3>
+  <div class="command-console">
+    <div class="command-console-output">
+      <p class="command-console-line">> system status</p>
+      <p class="command-console-line">All systems operational. CPU: 24% MEM: 3.2GB/8GB</p>
+      <p class="command-console-line">> scan sector 7</p>
+      <p class="command-console-line">Scanning sector 7...</p>
+      <p class="command-console-line">No anomalies detected. Sector clear.</p>
+      <p class="command-console-line">> deploy probe alpha</p>
+      <p class="command-console-line">Probe Alpha deployed to coordinates X:1257 Y:3498</p>
+    </div>
+    <div class="command-console-input-line">
+      <span class="command-console-prompt">SAGE></span>
+      <input type="text" class="command-console-input" placeholder="Enter command...">
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Terminal Output</h3>
+  <div class="terminal-output">
+    <span class="prompt">$</span> <span class="command">ping central-command</span>
+    PING central-command (192.168.1.1): 56 data bytes
+    64 bytes from 192.168.1.1: icmp_seq=0 ttl=64 time=4.321 ms
+    64 bytes from 192.168.1.1: icmp_seq=1 ttl=64 time=3.897 ms
+    64 bytes from 192.168.1.1: icmp_seq=2 ttl=64 time=4.112 ms
+    
+    <span class="prompt">$</span> <span class="command">system-check</span>
+    Running system diagnostics...
+    <span class="success">✓ Power systems: OPERATIONAL</span>
+    <span class="success">✓ Communications: OPERATIONAL</span>
+    <span class="warning">⚠ Radar systems: DEGRADED PERFORMANCE</span>
+    <span class="error">✗ External sensors: OFFLINE</span>
+  </div>
+  
+  <div class="mt-md"></div>
+      
+      <h3>Code Block</h3>
+      <div class="code-block">
+        <div class="code-block-header">initialize_system.sh</div>
+        <pre>
+#!/bin/bash
+# System initialization script
+# SAGE Defense Terminal v3.2
+
+echo "Initializing SAGE defense systems..."
+load_modules() {
+  for module in $(ls /opt/sage/modules/*.mod); do
+    echo "Loading module: $(basename $module)"
+    source $module
+  done
+}
+
+# Start core services
+start_core_services() {
+  systemctl start sage-radar
+  systemctl start sage-comms
+  systemctl start sage-targeting
+}
+
+load_modules
+start_core_services
+echo "System initialization complete."</pre>
+      </div>
+      
+      <div class="mt-md"></div>
+      
+      <h3>Code Block with Line Numbers</h3>
+      <div class="code-block-numbered">
+        <code>function scanPerimeter() {
+  console.log("Initiating perimeter scan...");
+  const sectors = ["alpha", "beta", "gamma", "delta"];
+  
+  for (let i = 0; i < sectors.length; i++) {
+    console.log(`Scanning sector ${sectors[i]}...`);
+    // Perform scan operations
+    if (Math.random() > 0.8) {
+      return `Alert in sector ${sectors[i]}`;
+    }
+  }
+  
+  return "All sectors clear";
+}</code>
+      </div>
+      
+      <div class="mt-md"></div>
+      
+      <h3>Console Output</h3>
+      <div class="console-output">
+        <p class="console-line">Initializing system...</p>
+        <p class="console-line">Loading core modules: <span class="loading-dots"></span></p>
+        <p class="console-line success">Core systems online.</p>
+        <p class="console-line">Connecting to command network...</p>
+        <p class="console-line warning">Network connection unstable.</p>
+        <p class="console-line">Retrying connection...</p>
+        <p class="console-line success">Connected to command network.</p>
+        <p class="console-line error">Error: Unable to initialize external sensors.</p>
+        <p class="console-line">System ready with limited functionality.</p>
+      </div>
+      
+      <div class="mt-md"></div>
+      
+      <h3>Data Matrix</h3>
+      <div class="data-matrix">
+        <div class="matrix-row">
+          <span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span>
+        </div>
+        <div class="matrix-row">
+          <span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span>
+        </div>
+        <div class="matrix-row">
+          <span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell highlight">1</span><span class="matrix-cell highlight">0</span><span class="matrix-cell highlight">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span>
+        </div>
+        <div class="matrix-row">
+          <span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell highlight">0</span><span class="matrix-cell highlight">1</span><span class="matrix-cell highlight">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span>
+        </div>
+        <div class="matrix-row">
+          <span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell highlight">1</span><span class="matrix-cell highlight">1</span><span class="matrix-cell highlight">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">0</span><span class="matrix-cell">0</span><span class="matrix-cell">1</span><span class="matrix-cell">1</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Navigation -->
+    <section id="navigation" class="component-section">
+      <h2 class="component-title">Navigation</h2>
+      <p class="component-description">Navigation components for moving between sections and pages.</p>
+      
+      <h3>Main Navigation</h3>
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Radar</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Communications</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Targeting</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Settings</a>
+    </li>
+  </ul>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Breadcrumbs</h3>
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Command Center</a></li>
+    <li class="breadcrumb-item active">Radar Systems</li>
+  </ul>
+  
+  <div class="breadcrumbs-vintage">
+    <div class="breadcrumbs-vintage-item">
+      <a href="#" class="breadcrumbs-vintage-link">SAGE</a>
+    </div>
+    <div class="breadcrumbs-vintage-item">
+      <a href="#" class="breadcrumbs-vintage-link">Defense Network</a>
+    </div>
+    <div class="breadcrumbs-vintage-item">
+      <a href="#" class="breadcrumbs-vintage-link">Terminal</a>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Pagination</h3>
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#">Previous</a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+  
+  <div class="pagination-vintage">
+    <button class="pagination-vintage-button disabled">&lt;</button>
+    <button class="pagination-vintage-button active">1</button>
+    <button class="pagination-vintage-button">2</button>
+    <button class="pagination-vintage-button">3</button>
+    <span class="pagination-vintage-ellipsis">...</span>
+    <button class="pagination-vintage-button">10</button>
+    <button class="pagination-vintage-button">&gt;</button>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Sidebar Navigation</h3>
+  <div class="sidebar-nav">
+    <div class="sidebar-nav-header">Command Menu</div>
+    <ul class="sidebar-nav-list">
+      <li class="sidebar-nav-item">
+        <a href="#" class="sidebar-nav-link active">System Status</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="#" class="sidebar-nav-link">Diagnostics</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="#" class="sidebar-nav-link">Security</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="#" class="sidebar-nav-link">Communications</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="#" class="sidebar-nav-link">Maintenance</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Pills Navigation</h3>
+  <ul class="nav-pills-vintage">
+    <li class="nav-pills-vintage-item">
+      <a href="#" class="nav-pills-vintage-link active">Overview</a>
+    </li>
+    <li class="nav-pills-vintage-item">
+      <a href="#" class="nav-pills-vintage-link">Alerts</a>
+    </li>
+    <li class="nav-pills-vintage-item">
+      <a href="#" class="nav-pills-vintage-link">Reports</a>
+    </li>
+    <li class="nav-pills-vintage-item">
+      <a href="#" class="nav-pills-vintage-link">Analytics</a>
+    </li>
+  </ul>
+</section>
+
+<!-- Tabs & Accordions -->
+<section id="tabs" class="component-section">
+  <h2 class="component-title">Tabs & Accordions</h2>
+  <p class="component-description">Components for organizing content into tabbed and collapsible sections.</p>
+  
+  <h3>Tabs</h3>
+  <div class="tabs">
+    <div class="tab-header">
+      <button class="tab-link active">System</button>
+      <button class="tab-link">Network</button>
+      <button class="tab-link">Security</button>
+      <button class="tab-link">Maintenance</button>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane active">
+        <h4>System Information</h4>
+        <p>SAGE Terminal v3.2.1</p>
+        <p>CPU: Intel i7-9750H @ 2.6GHz</p>
+        <p>Memory: 32GB DDR4</p>
+        <p>Storage: 1TB SSD</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Vintage Tabs</h3>
+  <div class="tabs-vintage">
+    <div class="tabs-vintage-nav">
+      <button class="tabs-vintage-nav-item active">Radar</button>
+      <button class="tabs-vintage-nav-item">Comms</button>
+      <button class="tabs-vintage-nav-item">Weapons</button>
+      <button class="tabs-vintage-nav-item">Logs</button>
+    </div>
+    <div class="tabs-vintage-content">
+      <div class="tabs-vintage-pane active">
+        <h4>Radar Systems</h4>
+        <p>Range: 500km</p>
+        <p>Status: Active</p>
+        <p>Targets Tracked: 3</p>
+        <p>Last Calibration: 2023-05-12 08:45</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Accordion</h3>
+  <div class="accordion-item">
+    <div class="accordion-header">System Specifications</div>
+    <div class="accordion-body">
+      <p>SAGE Defense Terminal v3.2.1</p>
+      <p>Developed by Advanced Defense Systems, Inc.</p>
+      <p>Classified Security Clearance Required for Full Access</p>
+    </div>
+  </div>
+  <div class="accordion-item active">
+    <div class="accordion-header">Network Configuration</div>
+    <div class="accordion-body">
+      <p>IP: 192.168.1.45</p>
+      <p>Subnet: 255.255.255.0</p>
+      <p>Gateway: 192.168.1.1</p>
+      <p>DNS: 8.8.8.8, 8.8.4.4</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header">Maintenance Schedule</div>
+    <div class="accordion-body">
+      <p>Weekly System Scan: Sundays @ 0200 hours</p>
+      <p>Monthly Diagnostics: 1st of month @ 0300 hours</p>
+      <p>Quarterly Hardware Check: Q1, Q2, Q3, Q4</p>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Vintage Accordion</h3>
+  <div class="accordion-vintage">
+    <div class="accordion-vintage-item active">
+      <div class="accordion-vintage-header">Mission Briefing</div>
+      <div class="accordion-vintage-content">
+        <div class="accordion-vintage-body">
+          <p>Operation Watchful Eye is a surveillance mission to monitor sector 7 for unauthorized activity.</p>
+          <p>Duration: 48 hours</p>
+          <p>Personnel: Alpha Team</p>
+          <p>Security Level: Classified</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-vintage-item">
+      <div class="accordion-vintage-header">Equipment List</div>
+      <div class="accordion-vintage-content">
+        <div class="accordion-vintage-body">
+          <ul class="retro-list">
+            <li>SAGE Terminal (Model XR-7)</li>
+            <li>Secure Communication Device</li>
+            <li>Portable Radar Unit</li>
+            <li>Emergency Power Supply</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-vintage-item">
+      <div class="accordion-vintage-header">Emergency Protocols</div>
+      <div class="accordion-vintage-content">
+        <div class="accordion-vintage-body">
+          <p>In case of system failure, follow these steps:</p>
+          <ol class="retro-list">
+            <li>Attempt system restart using command: <code>sys-restart</code></li>
+            <li>If unsuccessful, switch to backup power</li>
+            <li>Contact command center using emergency channel</li>
+            <li>Initiate safe mode with command: <code>safe-mode -f</code></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Collapsible Panels</h3>
+  <div class="panel-vintage">
+    <div class="panel-vintage-header">
+      <div class="panel-vintage-title">Security Clearance</div>
+      <div class="panel-vintage-icon">▼</div>
+    </div>
+    <div class="panel-vintage-body">
+      <p>Current clearance level: Alpha</p>
+      <p>Authorized personnel only beyond this point.</p>
+      <p>All activities are logged and monitored.</p>
+    </div>
+  </div>
+  
+  <div class="panel-vintage collapsed">
+    <div class="panel-vintage-header">
+      <div class="panel-vintage-title">System Resources</div>
+      <div class="panel-vintage-icon">▼</div>
+    </div>
+    <div class="panel-vintage-body">
+      <p>CPU Usage: 24%</p>
+      <p>Memory: 3.2GB / 8GB</p>
+      <p>Disk Space: 234GB / 500GB</p>
+      <p>Network: 15Mbps / 100Mbps</p>
+    </div>
+  </div>
+</section>
+
+<!-- Loaders -->
+<section id="loaders" class="component-section">
+  <h2 class="component-title">Loaders</h2>
+  <p class="component-description">Loading indicators and spinners for asynchronous operations.</p>
+  
+  <h3>Loading Spinners</h3>
+  <div class="grid-container">
+    <div class="grid-item third">
+      <div class="loading-spinner"></div>
+      <p>Standard Spinner</p>
+    </div>
+    <div class="grid-item third">
+      <div class="spinner-vintage-border"></div>
+      <p>Border Spinner</p>
+    </div>
+    <div class="grid-item third">
+      <div class="spinner-vintage-grow"></div>
+      <p>Growing Spinner</p>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Text Loading Indicators</h3>
+  <div class="grid-container">
+    <div class="grid-item half">
+      <p>Loading<span class="loading-dots"></span></p>
+      <p>Processing data<span class="loading-dots"></span></p>
+    </div>
+    <div class="grid-item half">
+      <p>Connecting <span class="spinner-line"></span></p>
+      <p>Scanning <span class="spinner-line"></span></p>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Loading Bars</h3>
+  <div class="loading-bar"></div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Data Transmission</h3>
+  <div class="data-transmission"></div>
+  <div class="data-transmission"></div>
+  <div class="data-transmission"></div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Vintage Loading Screen</h3>
+  <div class="terminal-window">
+    <div class="terminal-content">
+      <p class="terminal-flicker">SAGE DEFENSE SYSTEM LOADING...</p>
+      <p>Initializing core modules<span class="loading-dots"></span></p>
+      <p>Loading defense protocols<span class="loading-dots"></span></p>
+      <div class="progress-vintage">
+        <div class="progress-vintage-bar" style="width: 68%"></div>
+        <div class="progress-vintage-label">System Boot: 68%</div>
+      </div>
+      <p>Please stand by<span class="loading-dots"></span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Notifications -->
+<section id="notifications" class="component-section">
+  <h2 class="component-title">Notifications</h2>
+  <p class="component-description">Components for displaying notifications, alerts, and messages.</p>
+  
+  <h3>Toast Notifications</h3>
+  <div class="toast-container">
+    <div class="toast toast-success">
+      <div>System scan completed successfully.</div>
+      <button class="toast-close">×</button>
+    </div>
+    <div class="toast toast-warning">
+      <div>Low power detected. Connect to external power source.</div>
+      <button class="toast-close">×</button>
+    </div>
+  </div>
+  
+  <button class="btn primary mb-md">Show Toast Notification</button>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Notification Messages</h3>
+  <div class="notification">
+    <strong>Information:</strong> System maintenance scheduled for 0200 hours.
+    <button class="notification-close">×</button>
+  </div>
+  
+  <div class="notification-warning">
+    <strong>Warning:</strong> Unauthorized access attempt detected from IP 192.168.1.45.
+    <button class="notification-close">×</button>
+  </div>
+  
+  <div class="notification-error">
+    <strong>Error:</strong> Connection to command center lost. Attempting to reconnect.
+    <button class="notification-close">×</button>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Modal Dialog</h3>
+  <button class="btn primary" id="show-modal">Show Modal Dialog</button>
+  
+  <div class="modal-vintage">
+    <div class="modal-vintage-dialog">
+      <div class="modal-vintage-header">
+        <h3 class="modal-vintage-title">Security Alert</h3>
+        <button class="modal-vintage-close">×</button>
+      </div>
+      <div class="modal-vintage-body">
+        <p>Unauthorized access attempt detected.</p>
+        <p>Location: Sector 7, Terminal 3</p>
+        <p>Time: 15:42:36</p>
+        <p>IP Address: 192.168.1.45</p>
+        <p>Do you want to initiate lockdown procedures?</p>
+      </div>
+      <div class="modal-vintage-footer">
+        <button class="btn secondary">Cancel</button>
+        <button class="btn danger">Initiate Lockdown</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Tooltips</h3>
+  <div class="grid-container">
+    <div class="grid-item half">
+      <button class="btn tooltip">
+        Radar Settings
+        <span class="tooltip-text">Configure radar sensitivity and range</span>
+      </button>
+      
+      <span class="tooltip-vintage tooltip-vintage-top">
+        Hover for Info
+        <span class="tooltip-vintage-content">This is a vintage-style tooltip with additional information</span>
+      </span>
+    </div>
+    <div class="grid-item half">
+      <div class="tooltip-arrow tooltip-arrow-top">
+        Security Level
+        <span class="tooltip-arrow-text">Current security level: Alpha</span>
+      </div>
+      
+      <div class="tooltip-arrow tooltip-arrow-bottom">
+        System Status
+        <span class="tooltip-arrow-text">All systems operational</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Popup Menu</h3>
+  <button class="btn" id="show-popup">Show Popup Menu</button>
+  
+  <div class="popup-menu">
+    <div class="popup-menu-item">View Details</div>
+    <div class="popup-menu-item">Edit Configuration</div>
+    <div class="popup-menu-item">Run Diagnostics</div>
+    <div class="popup-menu-item">System Restart</div>
+  </div>
+</section>
+
+<!-- Utilities -->
+<section id="utilities" class="component-section">
+  <h2 class="component-title">Utility Classes</h2>
+  <p class="component-description">Helper classes for common styling needs.</p>
+  
+  <h3>Text Utilities</h3>
+  <div class="text-center">This text is centered</div>
+  <div class="text-right">This text is right-aligned</div>
+  <div class="text-danger">This text is in danger color</div>
+  <div class="text-warning">This text is in warning color</div>
+  <div class="text-success">This text is in success color</div>
+  <div class="blink">This text blinks like an old terminal</div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Spacing Utilities</h3>
+  <div class="grid-container">
+    <div class="grid-item half">
+      <div class="card p-md mb-md">
+        <p class="mt-0">Margin top: 0</p>
+        <p class="mb-sm">Margin bottom: small</p>
+        <p class="ml-md">Margin left: medium</p>
+        <p class="mr-lg">Margin right: large</p>
+      </div>
+    </div>
+    <div class="grid-item half">
+      <div class="card p-md mb-md">
+        <p class="p-0">Padding: 0</p>
+        <p class="p-sm">Padding: small</p>
+        <p class="p-md">Padding: medium</p>
+        <p class="p-lg">Padding: large</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Border Utilities</h3>
+  <div class="grid-container">
+    <div class="grid-item third">
+      <div class="p-md mb-md" style="border: 1px solid var(--crt-green-dim);">
+        Standard Border
+      </div>
+    </div>
+    <div class="grid-item third">
+      <div class="p-md mb-md border-pixelated">
+        Pixelated Border
+      </div>
+    </div>
+    <div class="grid-item third">
+      <div class="p-md mb-md screen-corners">
+        <div>Screen Corners</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Effect Utilities</h3>
+  <div class="grid-container">
+    <div class="grid-item third">
+      <div class="terminal-window p-md mb-md terminal-flicker">
+        <p>Terminal Flicker</p>
+      </div>
+    </div>
+    <div class="grid-item third">
+      <div class="terminal-window p-md mb-md">
+        <p class="terminal-glitch">Glitch Effect</p>
+      </div>
+    </div>
+    <div class="grid-item third">
+      <div class="terminal-window p-md mb-md vintage-filter">
+        <p>Vintage Filter</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>Layout Utilities</h3>
+  <div class="terminal-grid">
+    <div class="terminal-grid-item span-4">Grid Span 4</div>
+    <div class="terminal-grid-item span-4">Grid Span 4</div>
+    <div class="terminal-grid-item span-4">Grid Span 4</div>
+    <div class="terminal-grid-item span-6">Grid Span 6</div>
+    <div class="terminal-grid-item span-6">Grid Span 6</div>
+    <div class="terminal-grid-item span-12">Grid Span 12</div>
+  </div>
+  
+  <div class="mt-md"></div>
+  
+  <h3>System Status Panel</h3>
+  <div class="system-status-panel">
+    <div class="system-status-header">
+      <div class="system-status-title">SYSTEM STATUS</div>
+      <div class="system-status-indicator" style="background-color: var(--crt-green);"></div>
+    </div>
+    <div class="system-status-body">
+      <div class="system-status-item">
+        <div class="system-status-label">CPU Usage:</div>
+        <div class="system-status-value">24%</div>
+      </div>
+      <div class="system-status-item">
+        <div class="system-status-label">Memory:</div>
+        <div class="system-status-value">3.2GB / 8GB</div>
+      </div>
+      <div class="system-status-item">
+        <div class="system-status-label">Network:</div>
+        <div class="system-status-value">15Mbps / 100Mbps</div>
+      </div>
+      <div class="system-status-item">
+        <div class="system-status-label">Uptime:</div>
+        <div class="system-status-value">5d 12h 47m</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-vintage">
+  <div class="footer-vintage-content">
+    <div class="footer-vintage-column">
+      <h3 class="footer-vintage-title">SAGE Terminal</h3>
+      <p>Semi-Automatic Ground Environment Defense System</p>
+      <p>Version 3.2.1</p>
+      <div class="footer-vintage-social">
+        <a href="#" class="footer-vintage-social-link">F</a>
+        <a href="#" class="footer-vintage-social-link">T</a>
+            <a href="#" class="footer-vintage-social-link">G</a>
+            <a href="#" class="footer-vintage-social-link">L</a>
+          </div>
+        </div>
+        
+        <div class="footer-vintage-column">
+          <h3 class="footer-vintage-title">Navigation</h3>
+          <ul class="footer-vintage-nav">
+            <li class="footer-vintage-nav-item">
+              <a href="#" class="footer-vintage-nav-link">Dashboard</a>
+            </li>
+            <li class="footer-vintage-nav-item">
+              <a href="#" class="footer-vintage-nav-link">Command Center</a>
+            </li>
+            <li class="footer-vintage-nav-item">
+              <a href="#" class="footer-vintage-nav-link">Radar Systems</a>
+            </li>
+            <li class="footer-vintage-nav-item">
+              <a href="#" class="footer-vintage-nav-link">Communications</a>
+            </li>
+            <li class="footer-vintage-nav-item">
+              <a href="#" class="footer-vintage-nav-link">Settings</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-vintage-column">
+          <h3 class="footer-vintage-title">Resources</h3>
+          <ul class="footer-vintage-nav">
+            <li class="footer-vintage-nav-item">
+              <a href="#" class="footer-vintage-nav-link">Documentation</a>
+            </li>
+            <li class="footer-vintage-nav-item">
+              <a href="#" class="footer-vintage-nav-link">Training Modules</a>
+            </li>
+            <li class="footer-vintage-nav-item">
+              <a href="#" class="footer-vintage-nav-link">System Updates</a>
+            </li>
+            <li class="footer-vintage-nav-item">
+              <a href="#" class="footer-vintage-nav-link">Maintenance Schedule</a>
+            </li>
+            <li class="footer-vintage-nav-item">
+              <a href="#" class="footer-vintage-nav-link">Contact Support</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-vintage-bottom">
+        <div class="footer-vintage-copyright">
+          © 2023 Advanced Defense Systems, Inc. All rights classified.
+        </div>
+        <div class="footer-vintage-links">
+          <a href="#" class="footer-vintage-link">Terms of Use</a>
+          <a href="#" class="footer-vintage-link">Privacy Policy</a>
+          <a href="#" class="footer-vintage-link">Security</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <!-- Simple JavaScript for interactive elements -->
+  <script>
+    // Show/hide modal
+    const modalButton = document.getElementById('show-modal');
+    const modal = document.querySelector('.modal-vintage');
+    const modalClose = document.querySelector('.modal-vintage-close');
+    
+    if (modalButton && modal && modalClose) {
+      modalButton.addEventListener('click', function() {
+        modal.classList.add('open');
+      });
+      
+      modalClose.addEventListener('click', function() {
+        modal.classList.remove('open');
+      });
+    }
+    
+    // Popup menu
+    const popupButton = document.getElementById('show-popup');
+    const popupMenu = document.querySelector('.popup-menu');
+    
+    if (popupButton && popupMenu) {
+      popupButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        popupMenu.classList.toggle('show');
+        popupMenu.style.top = (e.target.offsetTop + e.target.offsetHeight + 5) + 'px';
+        popupMenu.style.left = e.target.offsetLeft + 'px';
+      });
+      
+      document.addEventListener('click', function() {
+        popupMenu.classList.remove('show');
+      });
+    }
+    
+    // Tab functionality
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    tabLinks.forEach(function(tabLink) {
+      tabLink.addEventListener('click', function() {
+        // Remove active class from all tabs
+        tabLinks.forEach(function(link) {
+          link.classList.remove('active');
+        });
+        
+        // Add active class to clicked tab
+        this.classList.add('active');
+        
+        // Hide all tab panes
+        tabPanes.forEach(function(pane) {
+          pane.classList.remove('active');
+        });
+        
+        // Show the corresponding tab pane
+        const index = Array.from(tabLinks).indexOf(this);
+        if (tabPanes[index]) {
+          tabPanes[index].classList.add('active');
+        }
+      });
+    });
+    
+    // Accordion functionality
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(function(header) {
+      header.addEventListener('click', function() {
+        const accordionItem = this.parentElement;
+        accordionItem.classList.toggle('active');
+      });
+    });
+    
+    // Vintage Accordion functionality
+    const vintageAccordionHeaders = document.querySelectorAll('.accordion-vintage-header');
+    
+    vintageAccordionHeaders.forEach(function(header) {
+      header.addEventListener('click', function() {
+        const accordionItem = this.parentElement;
+        accordionItem.classList.toggle('active');
+      });
+    });
+    
+    // Panel toggle functionality
+    const panelHeaders = document.querySelectorAll('.panel-vintage-header');
+    
+    panelHeaders.forEach(function(header) {
+      header.addEventListener('click', function() {
+        const panel = this.parentElement;
+        panel.classList.toggle('collapsed');
+      });
+    });
+    
+    // Add radar blips randomly
+    function addRadarBlip() {
+      const radar = document.querySelector('.radar-container');
+      if (radar) {
+        const blip = document.createElement('div');
+        blip.classList.add('radar-blip');
+        blip.style.top = Math.random() * 100 + '%';
+        blip.style.left = Math.random() * 100 + '%';
+        radar.appendChild(blip);
+        
+        // Remove blip after some time
+        setTimeout(() => {
+          blip.remove();
+        }, 5000);
+      }
+    }
+    
+    // Add random radar blips periodically
+    setInterval(addRadarBlip, 3000);
+    
+    // Update retro clock
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      
+      const clockElements = document.querySelectorAll('.retro-clock');
+      clockElements.forEach(function(clock) {
+        clock.textContent = `${hours}:${minutes}:${seconds}`;
+      });
+    }
+    
+    // Update clock every second
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial update
+  </script>
+</body>
+</html>
